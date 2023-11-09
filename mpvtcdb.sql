@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-03-2023 a las 21:29:16
+-- Tiempo de generación: 08-11-2023 a las 17:37:20
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 7.4.30
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
+--Veramatus
 -- Base de datos: `mpvtcdb`
 --
 
@@ -101,8 +101,10 @@ CREATE TABLE `expediente` (
 
 INSERT INTO `expediente` (`id`, `Anio`, `Fecha`, `Hora`, `Tipo`, `Asunto`, `TipoPersona`, `NumDocumento`, `Remitente`, `Archivo`, `Correo`, `Telefono`, `NroExpediente`, `NroExpedientetxt`, `Estado`, `Observaciones`, `Folios`, `CodSeguridad`, `created_at`, `updated_at`) VALUES
 (12, '2023', '2023-03-13', '14:40:50', 'CARTA', 'carta', 'Natural', '43344443', 'INTEC', 'REG000002.pdf', 'raulbriss980@gmail.com', '656565656', 2, '000002', 'Denegado', '', 2, '6126', '2023-03-13 19:40:50', '2023-03-13 23:19:33'),
-(13, '2023', '2023-03-13', '19:34:43', 'Oficio', 'invitacion especial', 'Natural', '123456', 'TEC', 'REG000003.pdf', 'raulbriss980@gmail.com', '77877878', 3, '000003', 'Pendiente', '', 3, '6165', '2023-03-14 00:34:43', '2023-03-14 00:34:43'),
-(15, '2023', '2023-03-14', '11:09:29', 'Carta', 'INVITACION PARA UN EVENTO', 'Juridica', '47848584778', 'TAREA COMPLETO', 'REG000005.pdf', 'raulbriss980@gmail.com', '854785474', 5, '000005', 'Atendido', '', 2, '6243', '2023-03-14 16:09:29', '2023-03-14 16:26:07');
+(13, '2023', '2023-03-13', '19:34:43', 'Oficio', 'invitacion especial', 'Natural', '123456', 'TEC', 'REG000003.pdf', 'raulbriss980@gmail.com', '77877878', 3, '000003', 'Atendido', '', 3, '6165', '2023-03-14 00:34:43', '2023-11-04 21:41:01'),
+(16, '2023', '2023-11-06', '08:54:24', 'Solicitud', 'Solicito permiso para construcción', 'Natural', '46102424', 'ELIZ MARRUFO MERINO', 'REG000004.pdf', 'vianvezo@hotmail.com', '953936058', 4, '000004', 'En Tramite', '', 3, '6204', '2023-11-06 13:54:25', '2023-11-06 14:19:32'),
+(17, '2023', '2023-11-06', '09:42:49', 'Oficio', 'Oficio a Muni de Bagua', 'Natural', '46102424', 'TERESA FERRE', 'REG000005.pdf', 'vianvezo@hotmail.com', '930623569', 5, '000005', 'Atendido', '', 20, '6243', '2023-11-06 14:42:49', '2023-11-07 14:02:45'),
+(18, '2023', '2023-11-07', '08:58:24', 'Oficio', 'Solicitud de Expendiente VarCore', 'Natural', '46102424', 'CORI ALVARES', 'REG000006.pdf', 'vianvezo@hotmail.com', '951753258', 6, '000006', 'En Tramite', '', 10, '6282', '2023-11-07 13:58:24', '2023-11-07 14:00:13');
 
 -- --------------------------------------------------------
 
@@ -224,7 +226,13 @@ INSERT INTO `tramite` (`id`, `Anio`, `Expediente`, `Comentario`, `Adjunto`, `Fec
 (13, 2023, 14, 'su documento ha sido derivado al area de marketing', 'Ninguna', '2023-03-14', 'luis', 'En Tramite', '2023-03-14 15:35:35', '2023-03-14 15:35:35'),
 (14, 2023, 14, 'le estamos enviando  su documento en respuesta a su trámite', 'Adjto20230314103813.pdf', '2023-03-14', 'luis', 'Atendido', '2023-03-14 15:38:13', '2023-03-14 15:38:13'),
 (15, 2023, 15, 'su documento ha sido derivado al area de marketing', 'Ninguna', '2023-03-14', 'Mesa de Partes', 'En Tramite', '2023-03-14 16:22:36', '2023-03-14 16:22:36'),
-(16, 2023, 15, 'te estamos tu documento en respuesta a tu trámite', 'Adjto20230314112606.pdf', '2023-03-14', 'luis', 'Atendido', '2023-03-14 16:26:06', '2023-03-14 16:26:06');
+(16, 2023, 15, 'te estamos tu documento en respuesta a tu trámite', 'Adjto20230314112606.pdf', '2023-03-14', 'luis', 'Atendido', '2023-03-14 16:26:06', '2023-03-14 16:26:06'),
+(17, 2023, 13, 'En tramite al Area de Ventas', 'Ninguna', '2023-11-04', 'Mesa de Partes', 'En Tramite', '2023-11-04 20:48:16', '2023-11-04 20:48:16'),
+(18, 2023, 13, 'denegado', 'Ninguna', '2023-11-04', 'Mesa de Partes', 'Atendido', '2023-11-04 21:41:01', '2023-11-04 21:41:01'),
+(19, 2023, 16, 'En atencion de Doc', 'Ninguna', '2023-11-06', 'Mesa de Partes', 'En Tramite', '2023-11-06 14:19:32', '2023-11-06 14:19:32'),
+(20, 2023, 17, 'se recibió el documento', 'Ninguna', '2023-11-06', 'Mesa de Partes', 'En Tramite', '2023-11-06 14:48:56', '2023-11-06 14:48:56'),
+(21, 2023, 18, 'En proceso de verificacion de la informacion', 'Ninguna', '2023-11-07', 'Mesa de Partes', 'En Tramite', '2023-11-07 14:00:13', '2023-11-07 14:00:13'),
+(22, 2023, 17, 'Revisar el abjunto', 'Ninguna', '2023-11-07', 'Mesa de Partes', 'Atendido', '2023-11-07 14:02:45', '2023-11-07 14:02:45');
 
 -- --------------------------------------------------------
 
@@ -254,10 +262,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `Rol`, `Dni`, `Nombres`, `Genero`, `email`, `email_verified_at`, `password`, `remember_token`, `IdHorario`, `Estado`, `created_at`, `updated_at`, `session_id`) VALUES
-(1, 1, '20222022', 'Mesa de Partes', 'M', 'admin@gmail.com', NULL, '$2y$10$zJy20Tckhduanx6bkkgouOvr19pyDQ8KZuPZ47ChHXjXjW/inGCyS', NULL, 1, 1, '2019-06-13 09:00:00', '2023-03-14 20:28:32', '03QhHba9gAUmD4gQSH2DopjPGF2fRKorZYMJTZWI'),
-(5, 1, '12345678', 'joel perez', 'M', 'joel@gmail.com', NULL, '$2y$10$ueNsVbNBTt.L978Bkp5KieLRq6U8.1J4TNPJZA6/b.LjffwllGPzy', NULL, 1, 1, '2023-03-14 00:22:52', '2023-03-14 00:24:03', 'dNVIjHJsa0RyA8SPs3bl8MbhBSI9YJIrWRhNZjP7'),
-(6, 1, '74875878', 'luis', 'M', 'raulbriss980@gmail.com', NULL, '$2y$10$UUpML27mo8C4uDjqNSrHM.APP1hiGIoT0WnO/qMcMgHFAi.cjSLUm', NULL, 1, 1, '2023-03-14 15:33:07', '2023-03-14 16:24:59', 'JeIFdslJe9p6oCEeoGyJj1PYiRvvOh2AipYgacZy'),
-(8, 1, '12345678', 'maria soto', 'F', 'maria@gmail.com', NULL, '$2y$10$kT3bjFGXlKH560e0NN1io.W0yxs25rbvz9vfLhBGuGs4KPSE3TNCq', NULL, 1, 0, '2023-03-14 16:19:37', '2023-03-14 16:19:51', '');
+(1, 1, '20222022', 'Mesa de Partes', 'M', 'admin@gmail.com', NULL, '$2y$10$zJy20Tckhduanx6bkkgouOvr19pyDQ8KZuPZ47ChHXjXjW/inGCyS', NULL, 1, 1, '2019-06-13 09:00:00', '2023-11-08 14:44:18', 'fX46oxGlArGNAg52SF81sYQtfNnjrLa5fd7CTsRT'),
+(9, 1, '46102424', 'Victor Andres Veramatus Soriano', 'M', 'vianvezo@gmail.com', NULL, '$2y$10$12xeu1LbB7Q7ZsixTup1iusH1yQ468MPap0IqgQhyXRuYKpDuqPIi', NULL, 1, 1, '2023-11-04 20:46:58', '2023-11-08 01:52:09', 'eVDynrEwJNrhtFtxPGeFhiLDq0RQJcAbaDVu78g4');
 
 --
 -- Índices para tablas volcadas
@@ -335,7 +341,7 @@ ALTER TABLE `correlativo`
 -- AUTO_INCREMENT de la tabla `expediente`
 --
 ALTER TABLE `expediente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `horario`
@@ -365,13 +371,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `tramite`
 --
 ALTER TABLE `tramite`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
